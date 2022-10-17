@@ -14,11 +14,4 @@ class RichestPeople {
         $result = $this->db->resultSet();
         return $result;
     }
-
-    public function getSingleRichestPeople($id)
-    {
-        $this->db->query("SELECT * FROM richestpeople Where Id = :Id");
-        $this->db->bind(':Id', $id, PDO::PARAM_INT);
-        return $this->db->single();
-    }
 }
