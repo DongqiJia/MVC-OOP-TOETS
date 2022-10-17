@@ -1,10 +1,10 @@
 <?php
 class RichestPeople extends Controller
 {
-    private $richestPeopleModel;
+    private  $richestPeopleModel;
     public function __construct()
     {        
-        $this->richestPeopleModel = $this->model('RichestPeople');
+        $this->richestPeopleModel = $this->model('Richestpeople');
     }
     public function index()
     {
@@ -28,5 +28,15 @@ class RichestPeople extends Controller
             'rows' => $rows
         ];
         $this->view('richestpeople/read', $data);
+    }
+
+    public function delete($id)
+    {
+        $this->richestPeopleModel->delete($id);
+        $data = [
+            'deleteStatus' => "Het record met id = $id is verwijdert"
+         ];
+         $this->view("richestpeople/delete", $data);
+         header("Refresh:2; url=" . URLROOT . "/richestpoeple/index");
     }
 }
