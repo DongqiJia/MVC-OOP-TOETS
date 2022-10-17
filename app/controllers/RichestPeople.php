@@ -4,7 +4,7 @@ class RichestPeople extends Controller
     private  $richestPeopleModel;
     public function __construct()
     {        
-        $this->richestPeopleModel = $this->model('Richestpeople');
+        $this->richestPeopleModel = $this->model('RichestPeopleModel');
     }
     public function index()
     {
@@ -27,7 +27,7 @@ class RichestPeople extends Controller
             'title' => "De vijf mensen ter wereld",
             'rows' => $rows
         ];
-        $this->view('richestpeople/read', $data);
+        $this->view('richestpeople/index', $data);
     }
 
     public function delete($id)

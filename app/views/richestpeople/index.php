@@ -12,10 +12,10 @@
 
     <table>
         <thead>
-            <th>Name</th>
-            <th>Nettoworth</th>
-            <th>Age</th>
-            <th>Company</th>
+            <th>Naam</th>
+            <th>Vermogen</th>
+            <th>Leeftijd</th>
+            <th>Bedrijf</th>
             <th>Delete</th>
         </thead>
         <tbody>
